@@ -5,19 +5,15 @@ using System.Threading.Tasks;
 
 namespace EnterpriseCore.Models
 {
-    public class BaseEntity
+    [Serializable]
+    public class BaseEntity : IEntity
     {
         private long? _Id = null;
         public virtual long? Id
         {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                _Id = value;
-            }
+            get { return _Id; }
+            set => _Id = value;
+
         }
         public virtual long? GetIdentity() { return this.Id; }
         public virtual void SetIdentity(object id)

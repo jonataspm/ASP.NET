@@ -8,7 +8,7 @@ namespace EnterpriseCore.Models
     public class Applicant : BaseEntity
     {
         public string Name { get; set; }
-        public List<TechnologyType> TechnologyTypes { get; set; }
+        public List<ApplicantTechnology> TechnologyTypes { get; set; }
 
     }
 }
